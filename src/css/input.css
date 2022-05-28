@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    .nav-fixed {
+        @apply fixed z-[9999] bg-rose-300 dark:bg-slate-500;
+    }
+
+    .nav-blur {
+        @apply bg-rose-300;
+    }
+
+    .nav {
+        @apply w-[30px] h-[2px] my-2 block bg-slate-700;
+    }
+
+    .nav-toggle-1 > span:nth-child(1) {
+        @apply rotate-45
+    }
+
+    .nav-toggle-1 > span:nth-child(2) {
+        @apply scale-0
+    }
+
+    .nav-toggle-1 > span:nth-child(3) {
+        @apply -rotate-45
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg overflow-hidden
+    }
+    .roses {
+        @apply bg-rose-300
+    }
+
+    #dark-toggle:checked ~ label div.dark-circle {
+        @apply translate-x-5
+    }
+}
